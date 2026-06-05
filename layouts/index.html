@@ -1,0 +1,54 @@
+{{ define "main" }}
+
+{{ partial "home_info.html" . }}
+
+<div class="post-content md-content">
+    {{ .Content }}
+</div>
+
+<hr>
+<div class="post-content md-content">
+    <h2>Posts</h2>
+</div>
+
+{{ range first 5 (where site.RegularPages "Section" "posts") }}
+<article class="post-entry">
+    <header class="entry-header">
+        <h2>{{ .Title }}</h2>
+    </header>
+
+    <div class="entry-content">
+        <p>{{ .Summary | plainify | htmlUnescape }}</p>
+    </div>
+
+    <footer class="entry-footer">
+        {{ partial "post_meta.html" . }}
+    </footer>
+
+    <a class="entry-link" href="{{ .Permalink }}"></a>
+</article>
+{{ end }}
+<hr>
+<div class="post-content md-content">
+    <h2>References</h2>
+</div>
+
+{{ range first 5 (where site.RegularPages "Section" "reference") }}
+<article class="post-entry">
+    <header class="entry-header">
+        <h2>{{ .Title }}</h2>
+    </header>
+
+    <div class="entry-content">
+        <p>{{ .Summary | plainify | htmlUnescape }}</p>
+    </div>
+
+    <footer class="entry-footer">
+        {{ partial "post_meta.html" . }}
+    </footer>
+
+    <a class="entry-link" href="{{ .Permalink }}"></a>
+</article>
+{{ end }}
+
+{{ end }}

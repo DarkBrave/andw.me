@@ -5,3 +5,36 @@ theme: ["PaperMod"]
 caches:
   images:
     dir: :cacheDir/images
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+menu:
+  main:
+    - name: Home
+      url: /
+      weight: 1
+    - name: Posts
+      url: /posts/
+      weight: 2
+    - name: Reference
+      url: /reference/
+      weight: 3
+    - name: Search
+      url: /search/
+      weight: 4
+params:
+  fuseOpts:
+    isCaseSensitive: false
+    threshold: 0.4
+    keys:
+      - title
+      - permalink
+      - summary
+      - content
+      - tags
+  mainSections:
+    - posts
+    - reference
+  disableSpecial1stPost: true
