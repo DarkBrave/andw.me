@@ -1,6 +1,6 @@
-baseURL: https://example.org/
+baseURL: https://awyck.me
 locale: en-us
-title: My New Hugo Project
+title: Andrew W
 theme: ["PaperMod"]
 caches:
   images:
