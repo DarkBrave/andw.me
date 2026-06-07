@@ -16,5 +16,6 @@ You can find me all over the place, including the following:
 
 - [Bluesky](https://bsky.app/profile/awyck.me)
 - [YouTube](https://www.youtube.com/@AndrewW-Channel/)
+- [Email](mailto:andrew@awyck.me)
 - [Minecraft](https://namemc.com/profile/DarkBrave.2)
 - [Old YouTube](https://www.youtube.com/@DarkBraveStuff)
