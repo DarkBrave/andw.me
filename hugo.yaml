@@ -41,3 +41,11 @@ params:
   assets:
     favicon: "/favicon.png"
 copyright: "© 2026 Andrew W unless otherwise noted"
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+ignoreFiles:
+  - "\\.qmd$"
+  - "\\.ipynb$"
+  - "\\.py$"
