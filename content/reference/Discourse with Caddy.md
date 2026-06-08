@@ -17,6 +17,9 @@ discourse.example.com {
 ```
 
 2. Follow the [beginner Discourse install guide](https://github.com/discourse/discourse/blob/main/docs/INSTALL-cloud.md#install-discourse-on-a-cloud-server) and run the installer command, completing the configuration as normal. This will fail to complete, as expected.
+```bash
+wget -qO- https://raw.githubusercontent.com/discourse/discourse_docker/main/install-discourse | sudo bash
+```
 
 3. Edit the Discourse docker configuration (`/etc/discourse/containers/app.yml`) to have the following edits:
 ```yml
