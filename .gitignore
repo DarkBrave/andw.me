@@ -71,3 +71,6 @@ bower_components
 
 /.quarto/
 **/*.quarto_ipynb
+
+/reference/r/**/*.md
+/reference/r/**/*.markdown_strict_files/
