@@ -26,25 +26,25 @@ ggplot(data=FullData, aes(x=name, y=score))+
 
 Now let's say I want to color-code them to each type of food, with the following order: blue for pizza, red for tacos, and green for burger.
 
-The easiest way to accomplish that is simply by manually assigning it in the "fill" field by combining them all into a 1D list from left to right, as I have done below.
+The easiest way to accomplish that is simply by manually assigning it in the "fill" field by combining them all into a vector (vectors are when you use a `c(1, 2, 3)` to define a list of values), listing the colors you want from left to right, as I have done below.
 
 ```{r}
 ggplot(data=FullData, aes(x=name, y=score))+
   geom_col(fill=c("blue", "red", "blue", "green"))
 ```
 
-Now this does work, but for one there just isn't a key on this graph, so viewers have no idea what the color means in the first place. Also, since the color hard-coded, if any one person's food changes or we insert someone else in the middle, we have to manually adjust the list of colors.
+Now this does work, but there isn't a key on this graph, so viewers have no idea what the color means in the first place. Likewise, since the colors are hard-coded, if any one person's food changes or we insert someone else in the middle, we have to manually adjust the list of colors to prevent blank/misassigned entries.
 
-Instead, we can use the aesthetic mapping, which tells ggplot how to use data-driven components to describe your graph, specifically for the "fill" value.
+Instead, we can use the aesthetic mapping (values stored in the `aes(field1=data1, field2=data2)` format that tells ggplot how to use data-driven variables to describe your graph), specifically for the "fill" value field.
 
 ```{r}
 ggplot(data=FullData, aes(x=name, y=score, fill=food))+
   geom_col()
 ```
 
-Now this fixes the "no key" and "need to manually update colors" problems, but now the colors are randomly chosen by ggplot instead of by us!
+Now this fixes the "there's no key" and "need to manually update colors manually" problems, but now the colors are randomly chosen by ggplot instead of by us!
 
-To set them ourselves, we can use the "scale_fill_manual" tool to give it a special mapping of what colors we want to be assigned to each type of food.
+To set them ourselves, we can use the "scale_fill_manual" tool to define what colors we want to be assigned to each type of food. This also takes a vector, and for simplicity (also so it can be reused in the code), I've split it into its own variable.
 
 ```{r}
 ColorCode = c("pizza" = "blue", "tacos" = "red", "burger" = "green")
@@ -53,4 +53,4 @@ ggplot(data=FullData, aes(x=name, y=score, fill=food))+
   scale_fill_manual(values=ColorCode)
 ```
 
-This is about as good as we can get it to be. Of course if this were to be presented, you should add a chart title, make the axes have properly formatted names, and do some light theming, but the core of these features can be applied to any graph you want to!
+This is about as good as we can get it to be for now. Of course if this graph were to be presented, you should fix up the axes titles and do some light theming, but the core of these features can be applied to any graph you want to!
