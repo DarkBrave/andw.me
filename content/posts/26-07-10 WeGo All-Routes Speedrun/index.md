@@ -1,6 +1,8 @@
 ---
 title: "WeGo All-Routes Speedrun"
 date: 2026-07-10
+cover:
+  image: map.png
 ---
 
 I rode every single WeGo local/frequent/connector service bus route in one day, riding to at least one unique stop for that route.
@@ -26,9 +28,7 @@ My rules were as follows:
 
 ## Data
 
-Here's the mostly accurate map of all the buses I rode (I didn't have the battery life to do a full Strava-style GPS):
-![map.png](map.png)
-
+At the top of the page, you can see the mostly accurate map of all the buses I rode. Sadly, I didn't have the battery life to do a full Strava-style GPS.
 
 And because of the Miles in Transit Discord/Ben Chase Transit Challenge, I also kept a spreadsheet of everything, excluding a datapoint I somehow missed:
 ![spreadsheet.png](spreadsheet.png)
